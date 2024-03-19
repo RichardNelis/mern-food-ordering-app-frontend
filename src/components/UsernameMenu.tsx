@@ -16,8 +16,12 @@ export const UsernameMenu = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-orange-500 gap-2">
-        <CircleUserRound className="text-orange-500" />
-        {user?.email}
+        {user?.picture ? (
+          <img src={user?.picture} className="rounded-full size-6" />
+        ) : (
+          <CircleUserRound className="text-orange-500" />
+        )}
+        {user?.name}
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem>
