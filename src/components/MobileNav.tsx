@@ -26,8 +26,12 @@ export const MobileNav = () => {
         <SheetTitle>
           {isAuthenticated ? (
             <span className="flex items-center font-bold gap-2">
-              <CircleUserRound className="text-orange-500" />
-              {user?.email}
+              {user?.picture ? (
+                <img src={user?.picture} className="rounded-full size-6" />
+              ) : (
+                <CircleUserRound className="text-orange-500" />
+              )}
+              {user?.name}
             </span>
           ) : (
             <span> Welcome to MernEats.com!</span>
