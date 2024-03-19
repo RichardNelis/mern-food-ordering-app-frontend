@@ -28,8 +28,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/" 
-          output_location: "dist"
+          app_location: ""  # Todo o conteúdo do repositório é considerado parte do aplicativo
+          output_location: "dist"  # Local onde o Vite gera os arquivos de construção
           skip_deploy_on_missing_secrets: true  # Adicionando esta configuração para evitar falha em caso de token de implantação ausente
 
   close_pull_request_job:
