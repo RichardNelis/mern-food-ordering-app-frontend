@@ -36,4 +36,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "/"  # Localização do aplicativo (raiz)
-          output_location: "build"  # Localização dos arquivos de construção do Vite
+          output_location: "dist"  # Localização dos arquivos de construção do Vite
