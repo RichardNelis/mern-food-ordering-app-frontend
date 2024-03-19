@@ -55,7 +55,7 @@ jobs:
         run: unzip release.zip
       
       - name: Login to Azure
-        uses: azure/login@v1
+        uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7EFB60D274064A579BD4851B6147523F }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9EBCF3237FBC4BEE8F4AF4BAAB83B0CA }}
@@ -63,7 +63,7 @@ jobs:
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with:
           app-name: 'mern-food-ordering-app-frontend'
           slot-name: 'Production'
