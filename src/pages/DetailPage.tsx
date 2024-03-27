@@ -137,14 +137,14 @@ const DetailPage = () => {
               cartItems={cartItems}
               removeFromCart={removeFromCart}
             />
+            <CardFooter>
+              <CheckoutButton
+                disabled={cartItems.length === 0}
+                onCheckout={onCheckout}
+                isLoading={isCheckoutLoading}
+              />
+            </CardFooter>
           </Card>
-          <CardFooter>
-            <CheckoutButton
-              disabled={cartItems.length === 0}
-              onCheckout={onCheckout}
-              isLoading={isCheckoutLoading}
-            />
-          </CardFooter>
         </div>
       </div>
     </div>
